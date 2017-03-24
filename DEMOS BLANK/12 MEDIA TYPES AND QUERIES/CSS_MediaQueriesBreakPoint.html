@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Media Queries Break Point</title>
+    <style>
+
+      /* Desktop-first styles: Avoid */
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        @media all and (max-width: 50em) {
+            .column {
+                float: none;
+                width: auto;
+            }
+        }
+
+        /* Mobile-first styles FTW */
+
+            @media all and (min-width: 50em) {
+                .column {
+                    float: left;
+                    width: 50%;
+                }
+            }
+
+    </style>
+</head>
+<body>
+    <!-- Comprehensive list:
+        css-tricks.com/snippets/css/media-queries-for-standard-devices/
+     -->
+   <!--  Over the 4 years we have slowly moved away from device specific breakpoints 
+    in favour of content specific breakpoints, 
+    i.e. adding a breakpoint when the content is no longer easy to consume.
+  With this fundamental shift in thinking we no longer have to fear a new device 
+       — a new iPhone width — 
+  because we've already fixed our sites to work everywhere.
+    Refer: responsivedesign.is/articles/why-you-dont-need-device-specific-breakpoints
+    -->
+   <!-- 
+      1) Pick major breakpoints by starting small, then working up.
+       Design the content to fit on a small screen size first, 
+       then expand the screen until a breakpoint becomes necessary. 
+       This will allow you to optimize breakpoints based on content 
+       and maintain the fewest number of breakpoints possible.
+
+      2) Pick minor breakpoints when necessary. 
+       In addition to choosing major breakpoints when layout changes significantly, 
+       it is also helpful to adjust for minor changes. 
+       For example between major breakpoints, 
+       it may be helpful to adjust the margins or padding on an element, 
+       or increase the font size to make it feel more natural in the layout.
+       
+       3) Optimize text for reading
+        Classic readability theory suggests that an ideal column should contain 
+       70 to 80 characters per line (about 8 to 10 words in English), 
+       thus each time the width of a text block grows past about 10 words, 
+       a breakpoint should be considered.
+
+       4)Never completely hide content
+       Be careful when choosing what content to hide or show depending on screen size. 
+       Don’t simply hide content just because you can’t fit it on screen. 
+       Screen size is not a definitive indication of what a user may want.
+
+       Reference:
+       developers.google.com/web/fundamentals/layouts/rwd-fundamentals/how-to-choose-breakpoints?hl=en
+       bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/#content
+       -->
+
+</body>
+</html>

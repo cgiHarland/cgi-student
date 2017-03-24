@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advanced Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- the burger icon and corporate logo are grouped together.  The burger icon only displays
+                when the menu collapses -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsableNav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">
+                    <img src="images/logo-white.svg" alt="QA Corporate Logo" height="25">
+                </a>
+            </div>
+
+            <!-- wrap the navigation elements which will be hidden on small screens -->
+
+            <div class="collapse navbar-collapse" id="collapsableNav">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li class="active"><a href="registration.html">Course Registration</a></li>
+                    <li><a href="team.html">The Team</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 class="trainer">Register for a course</h1>
+
+    <main class="container">
+        <form action="#" class="form-horizontal">
+            <fieldset>
+                <legend>Your details:</legend>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="name" class="hidden-xs hidden-sm col-md-2">Name:</label>
+                            <div class="col-md-10"><input class="form-control" type="text" id="name" placeholder="Name"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle" class="hidden-xs hidden-sm col-md-2">Job title:</label>
+                            <div class="col-md-10"><input class="form-control" type="text" id="jobTitle" placeholder="Job title"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="company" class="hidden-xs hidden-sm col-md-2">Company:</label>
+                            <div class="col-md-10"><input class="form-control" type="text" id="company" placeholder="Company"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="telNumber" class="hidden-xs hidden-sm col-md-2">Telephone:</label>
+                            <div class="col-md-10"><input class="form-control" type="tel" id="telNumber" placeholder="Tel Number"></div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Course details:</legend>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <label class="hidden-xs hidden-sm col-md-2" for="course">Course:</label>
+                            <div class="col-md-10">
+                                <select class="form-control" name="course" id="course">
+                                    <option value="">Choose a course:</option>
+                                    <option value="QAJAVSC">Programming with Javascript</option>
+                                    <option value="QAWEBCSS">Developing Responsive Websites</option>
+                                    <option value="QAWEBUI">Developing Web Applications using HTML5</option>
+                                    <option value="QAJQUERY">Leveraging the power of jQuery</option>
+                                    <option value="QAANGULARJS">Building MVC Web Applications using AngularJS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="quantity" class="hidden-xs hidden-sm col-md-4">Number of delegates:</label>
+                            <div class="col-md-8"><input class="form-control" type="number" id="quantity" placeholder="Number of delegates"></div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Payment method:</legend>
+                <div class="radio">
+                    <label for="creditcard">
+                    <input type="radio" name="method" id="creditcard">
+                    Credit card</label>
+                </div>
+                <div class="radio">
+                    <label for="invoice">
+                    <input type="radio" name="method" id="invoice">
+                    Invoice</label>
+                </div>
+                <div class="radio">
+                    <label for="account">
+                    <input type="radio" name="method" id="account">
+                    Account</label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

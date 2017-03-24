@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Rule</title>
+    <!--<meta> viewport element gives the browser instructions on how to control
+    the page's dimensions and scaling.
+
+    The width=device-width part sets the width of the page to follow
+    the screen-width of the device (which will vary depending on the device).
+
+    The initial-scale=1.0 part sets the initial zoom level when the page
+    is first loaded by the browser.-->
+
+  
+
+    <style>
+         /*The @media rule is used to define different style rules for different media types/devices.
+
+         In CSS2 this was called media types, while in CSS3 it is called media queries.
+
+         Media queries look at the capability of the device, and can be used to check many things, such as:
+
+         width and height of the browser window
+         width and height of the device
+         orientation (is the tablet/phone in landscape or portrait mode?)
+         resolution
+         and much more*/
+
+         /*Media Query Syntax
+
+         @media not|only mediatype and (expressions) {
+            CSS-Code;
+        }*/
+
+         /*CSS3 Media Types*/
+         /*all -- 	Used for all media type devices
+         print -- 	Used for printers
+         screen --	Used for computer screens, tablets, smart-phones etc.
+         speech --	Used for screenreaders that "reads" the page out loud*/
+
+
+         /*min-width	The minimum width of the display area, such as a browser window
+         max-width	The maximum width of the display area, such as a browser window
+         min-device-width	The minimum width of the device, such as a computer screen
+         max-device-width	The maximum width of the device, such as a computer screen*/
+
+
+         /*Mobile first approach*/
+
+         body {
+             background-color: lightblue;
+         }
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Resize the browser window to see the effect!</h1>
+    <p>
+        The media query will only apply if the media type is screen
+        and the viewport is 480px wide or wider.
+    </p>
+
+
+</body>
+</html>
